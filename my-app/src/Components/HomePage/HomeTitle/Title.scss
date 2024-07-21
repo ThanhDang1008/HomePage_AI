@@ -1,5 +1,25 @@
-@import "normalize.css";
-@import url("https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&display=swap");
+// Keyframes for animations
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .container_item {
   width: 100%;
@@ -16,6 +36,7 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  animation: fadeIn 1s ease-in-out;
 
   .container_item--title {
     width: 100%;
@@ -32,6 +53,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    animation: fadeInText 1.5s ease-in-out;
   }
 
   .container_item--text {
@@ -40,11 +62,13 @@
     font-size: 1.4rem;
     margin: 18px 0 50px 0;
     opacity: 0.6;
+    animation: fadeInText 2s ease-in-out;
   }
-
+  /* ghi đè */
   .ant-btn.css-dev-only-do-not-override-an9cvo.ant-btn-primary.ant-btn-lg {
     border-radius: 25px;
     height: 52px;
+    animation: fadeIn 2.5s ease-in-out;
   }
 
   .container_item--image {
@@ -52,11 +76,13 @@
     justify-content: center;
     align-items: center;
     margin-top: 30px;
+    animation: fadeIn 3s ease-in-out;
   }
 
   .container_item-link {
     color: #ffffff;
     font-size: 1.1rem;
+    animation: fadeIn 3.5s ease-in-out;
   }
 
   /*  Responsiveness */
@@ -130,7 +156,7 @@
         font-size: 0.9rem;
         margin: 15px 0 40px 0;
       }
-
+      /* ghi đè */
       .ant-btn.css-dev-only-do-not-override-an9cvo.ant-btn-primary.ant-btn-lg {
         height: 45px;
       }
